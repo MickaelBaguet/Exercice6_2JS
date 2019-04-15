@@ -18,25 +18,26 @@
       document.addEventListener('mouseover', function()
         {
           // srcCible prends le src de la cible
-          var srcCible = event.target.src;
+          // var srcCible = event.target.src;
+          // alert(srcCible);
           // Si les 6 derniers caractères ne correspondent (si ce n'est pas l'image alternatif)
-          if (srcCible.slice(-6) != "_2.jpg")
-          {
+          // if (srcCible.slice(-6) != "_2.jpg")
+          // {
             // On modifie le src pour qu'il fasse apparaitre l'image alt
-            event.target.src =  srcCible.replace(/.jpg/g, "_2.jpg");
-          }
+            event.target.src =  event.target.src.replace(/.jpg/g, "_2.jpg");
+          // }
         });
       // Si on sort la souris d'un élément de la page alors :
       document.addEventListener('mouseout', function()
         {
           // srcCible prends le src de la cible
-          var srcCible = event.target.src;
+          // var srcCible = event.target.src;
           // S'il s'agit de l'image alt
-          if (srcCible.slice(-6) == "_2.jpg")
-          {
+          // if (srcCible.slice(-6) == "_2.jpg")
+          // {
             // On modifie la src pour faire apparaitre l'image d'origine
-            event.target.src =  srcCible.replace(/_2.jpg/g, ".jpg");
-          }
+            event.target.src =  event.target.src.replace(/_2.jpg/g, ".jpg");
+          // }
         });
     </script>
   </body>
